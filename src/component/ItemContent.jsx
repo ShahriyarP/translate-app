@@ -4,11 +4,19 @@ import { useState, useContext } from "react";
 import ContextApi from "./ContextApi";
 import InputGroup from "./InputGroup";
 import Question from "./Question";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const ItemContent = () => {
-  const { getData, setText, notify, text, language, res, ToastContainer } =
-    useContext(ContextApi);
+  const {
+    getData,
+    setText,
+    notify,
+    text,
+    language,
+    res,
+    ToastContainer,
+    loading,
+  } = useContext(ContextApi);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -63,7 +71,7 @@ const ItemContent = () => {
           </div>
         </form>
       </div>
-      {<ToastContainer style={{}} />}
+      <ToastContainer />
       <Resault textShow={res} />
       <Question />
       <Footer />

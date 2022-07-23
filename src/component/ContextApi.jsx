@@ -9,13 +9,16 @@ export const ContextProvider = ({ children }) => {
   const [text, setText] = useState("");
   const [language, setLanguage] = useState("");
   const [res, setres] = useState();
+  const [loading, setLoading] = useState();
 
   const getData = async (lang, text) => {
+    setLoading(true);
     const response = await fetch(
       `${process.env.REACT_APP_API}?token=${process.env.REACT_APP_TOKEN}&action=google&lang=${lang}&q=${text}`
     );
     const { result } = await response.json();
     setres(result);
+    setLoading(false);
   };
 
   const notify = (textNotify) => {
@@ -36,6 +39,7 @@ export const ContextProvider = ({ children }) => {
         getData,
         notify,
         ToastContainer,
+        loading,
       }}
     >
       {children}
