@@ -10,28 +10,28 @@
     {
       "src": "maskable.png",
       "sizes": "196x196",
-      "type": "image/x-icon",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "dicpng192.png",
       "sizes": "192x192",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "dicpng256.png",
       "sizes": "256x256",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "dicpng384.png",
       "sizes": "384x384",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "dicpng512.png",
       "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ]
 }
